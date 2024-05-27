@@ -1,0 +1,4 @@
+序言--DB Tables
+
+use DB_name;  选择数据库
+set names utf8;  选择要用的字符集
