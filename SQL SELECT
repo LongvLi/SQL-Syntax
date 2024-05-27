@@ -2,3 +2,8 @@ SQL SELECT 语句
 
 SELECT column1, column2, ... FROM table_name; 选择指定的字段
 SELECT * FROM table_name; 选择所有字段
+
+SQL SELECT DISTINCT 语句
+
+SELECT DISTINCT column1, column2, ... FROM table_name;
+在表中，一个列可能会包含多个重复值，DISTINCT 关键词用于返回唯一不同的值。
