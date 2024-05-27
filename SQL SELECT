@@ -1,0 +1,4 @@
+SQL SELECT 语句
+
+SELECT column1, column2, ... FROM table_name; 选择指定的字段
+SELECT * FROM table_name; 选择所有字段
