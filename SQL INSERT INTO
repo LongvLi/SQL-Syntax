@@ -1,0 +1,29 @@
+（1）SQL INSERT INTO 语句
+
+INSERT INTO 语句用于向表中插入新记录。
+
+（2）SQL INSERT INTO 语法
+INSERT INTO 语句可以有两种编写形式。
+
+第一种形式无需指定要插入数据的列名，只需提供被插入的值即可：
+但没有指定要插入数据的列名的形式需要列出插入行的每一列数据。
+
+INSERT INTO table_name
+VALUES (value1,value2,value3,...);
+
+
+第二种形式需要指定列名及被插入的值：
+
+INSERT INTO table_name (column1,column2,column3,...)
+VALUES (value1,value2,value3,...);
+这种方法的value的值对应插入column中。
+
+其中， table_name 需要插入新记录的表名。
+      column1, column2, ... 需要插入的字段名。
+      value1, value2, ... 需要插入的字段值。
+
+（3）补充
+insert into select 和select into from 的区别
+
+insert into scorebak select * from socre where neza='neza'   --插入一行,要求表scorebak 必须存在
+select *  into scorebak from score  where neza='neza'  --也是插入一行,要求表scorebak 不存在
