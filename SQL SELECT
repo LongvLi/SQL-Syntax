@@ -1,9 +1,51 @@
-SQL SELECT 语句
+（1）SQL SELECT 语句
 
 SELECT column1, column2, ... FROM table_name; 选择指定的字段
 SELECT * FROM table_name; 选择所有字段
 
-SQL SELECT DISTINCT 语句
+（2）SQL SELECT DISTINCT 语句
 
 SELECT DISTINCT column1, column2, ... FROM table_name;
 在表中，一个列可能会包含多个重复值，DISTINCT 关键词用于返回唯一不同的值。
+
+
+******进阶******
+（3）SQL SELECT TOP, LIMIT, ROWNUM 子句
+
+（3.1）SQL SELECT TOP 子句
+SELECT TOP 子句用于规定要返回的记录的数目。
+
+SELECT TOP 子句对于拥有数千条记录的大型表来说，是非常有用的。
+
+eg：
+变相返回后 N 行:
+--前5行
+select top 5 * from table
+
+--后5行
+select top 5 * from table order by id desc  --desc 表示降序排列 asc 表示升序
+
+
+***注意***
+并非所有的数据库系统都支持 SELECT TOP 语句。 MySQL 支持 LIMIT 语句来选取指定的条数数据， Oracle 可以使用 ROWNUM 来选取。
+
+
+（3.2）MySQL SELECT LIMIT
+
+eg:
+下面的 SQL 语句从 "Websites" 表中选取头两条记录：
+
+SELECT * FROM Websites LIMIT 2;
+
+（3.4）SQL SELECT TOP PERCENT
+
+在 Microsoft SQL Server 中还可以使用百分比作为参数。
+
+eg：下面的 SQL 语句从 websites 表中选取前面百分之 50 的记录：
+以下操作在 Microsoft SQL Server 数据库中可执行。
+
+SELECT TOP 50 PERCENT * FROM Websites;
+
+
+
+
