@@ -1,0 +1,16 @@
+（1）SQL ORDER BY 关键字
+
+ORDER BY 关键字用于对结果集按照一个列或者多个列进行排序。
+ORDER BY 关键字默认按照升序对记录进行排序。如果需要按照降序对记录进行排序，您可以使用 DESC 关键字。
+
+
+
+（2）SQL ORDER BY 语法
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC; （排序时先看左，再看右）
+
+其中， column1, column2, ...：要排序的字段名称，可以为多个字段。
+      ASC：表示按升序排序。
+      DESC：表示按降序排序。
+
