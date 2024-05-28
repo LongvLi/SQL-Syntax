@@ -1,0 +1,21 @@
+（1）SQL DELETE 语句
+
+DELETE 语句用于删除表中的行。
+
+（2）SQL DELETE 语法
+
+DELETE FROM table_name
+WHERE condition;
+
+其中， table_name：要删除的表名称。
+      condition：删除条件，用于指定哪些数据要删除。
+
+***注意***
+请注意 SQL DELETE 语句中的 WHERE 子句！
+WHERE 子句规定哪条记录或者哪些记录需要删除。如果您省略了 WHERE 子句，所有的记录都将被删除！
+
+
+（3）删除所有数据
+
+您可以在不删除表的情况下，删除表中所有的行。这意味着表结构、属性、索引将保持不变。
+DELETE FROM table_name;
