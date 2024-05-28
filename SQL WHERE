@@ -1,0 +1,53 @@
+SQL WHERE 子句
+
+SELECT column1, column2, ... FROM table_name WHERE condition;
+注意：SQL 使用单引号来环绕文本值（大部分数据库系统也接受双引号）；
+      如果是数值字段，请不要使用引号。
+
+
+（1）可以使用在where子句中的运算符:
+=	--------> 等于
+<>	-------> 不等于。注释：在 SQL 的一些版本中，该操作符可被写成 !=
+>(=)	------> 大于(等于)
+<(=)	------> 小于(等于)
+BETWEEN	------> 在某个范围内
+LIKE	------> 搜索某种模式
+IN	------> 指定针对某个列的多个可能值
+
+
+（2）对于逻辑运算：
+And:与 同时满足两个条件的值
+Or:或 满足其中一个条件的值
+Not:非 满足不包含该条件的值
+
+***逻辑运算的优先级***
+()    not        and         or
+
+
+（3）对于特殊条件：
+空值判断： is null
+between ... and ... (在 之间的值，查询的范围包涵有上下限的值)
+in (eg: Select * from emp where sal in (5000,3000,1500); 查询 EMP 表 SAL 列中等于 5000，3000，1500 的值。)
+like: 模糊查询 (eg: Select * from emp where ename like 'M%'; 查询 EMP 表中 Ename 列中有 M 的值，M 为要查询内容中的模糊信息。
+                且其中% 表示多个字值，_ 下划线表示一个字符；
+                     M% : 为能配符，正则表达式，表示的意思为模糊查询信息为 M 开头的。
+                     %M% : 表示查询包含M的所有内容。
+                     %M_ : 表示查询以M在倒数第二位的所有内容。)
+
+
+
+（4）不带比较运算符的 WHERE 子句：
+WHERE 子句并不一定带比较运算符，当不带运算符时，会执行一个隐式转换。当 0 时转化为 false，1 转化为 true。例如：
+
+SELECT studentNO FROM student WHERE 0
+则会返回一个空集，因为每一行记录 WHERE 都返回 false。
+
+SELECT  studentNO  FROM student WHERE 1
+返回 student 表所有行中 studentNO 列的值。因为每一行记录 WHERE 都返回 true。
+
+
+
+
+
+
+
